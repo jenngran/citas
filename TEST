@@ -1,0 +1,47 @@
+test doctest
+C:\Users\jos-r\Documents\chiquita\cita>py main.py
+Error al conectar a la base de datos:
+Traceback (most recent call last):
+  File "main.py", line 11, in <module>
+    gestor_usuarios.agregar_usuario("user123", "contrasena123", "paciente")
+  File "C:\Users\jos-r\Documents\chiquita\cita\model\usuario.py", line 34, in agregar_usuario
+    with self.conn.cursor() as cursor:
+AttributeError: 'NoneType' object has no attribute 'cursor'
+
+C:\Users\jos-r\Documents\chiquita\cita>python -m doctest -v main.py
+1 items had no tests:
+    main
+0 tests in 1 items.
+0 passed and 0 failed.
+Test passed.
+
+C:\Users\jos-r\Documents\chiquita\cita>cd model
+
+C:\Users\jos-r\Documents\chiquita\cita\model>python -m doctest -v cita.py
+8 items had no tests:
+    cita
+    cita.Cita
+    cita.Cita.__init__
+    cita.HistorialMedico
+    cita.HistorialMedico.__init__
+    cita.HistorialMedico.connect_to_db
+    cita.HistorialMedico.guardar_cita_en_db
+    cita.HistorialMedico.obtener_citas_del_paciente
+0 tests in 8 items.
+0 passed and 0 failed.
+Test passed.
+
+C:\Users\jos-r\Documents\chiquita\cita\model>python -m doctest -v usuario.py
+9 items had no tests:
+    usuario
+    usuario.GestorUsuarios
+    usuario.GestorUsuarios.__init__
+    usuario.GestorUsuarios.agregar_usuario
+    usuario.GestorUsuarios.autenticar_usuario
+    usuario.GestorUsuarios.connect_to_db
+    usuario.GestorUsuarios.listar_usuarios
+    usuario.Usuario
+    usuario.Usuario.__init__
+0 tests in 9 items.
+0 passed and 0 failed.
+Test passed.
