@@ -1,0 +1,31 @@
+<mat-card class="carta">
+  <mat-card-title class="titulo">
+    <h2>LOGIN</h2>
+  </mat-card-title>
+  <mat-card-content>
+    <div [formGroup]="fromLogin" class="p-6" fxLayout="column" fxLayoutGap="16px">
+      <div class="formulario">
+        <!-- usuario -->
+        <mat-form-field fxFlex="grow">
+          <mat-label>Usuario</mat-label>
+          <input formControlName="usuario" matInput required>
+          <mat-error *ngIf="fromLogin.get('usuario')!.hasError('required')">Se requiere el Usuario</mat-error>
+        </mat-form-field>
+        <!-- password -->
+        <mat-form-field fxFlex="grow">
+          <mat-label>Contraseña</mat-label>
+          <input [type]="inputType" formControlName="pass" matInput required (keyup.enter)="submit()">
+          <button (click)="toggleVisibility()" mat-icon-button matSuffix matTooltip="Toggle Visibility" type="button">
+            <mat-icon *ngIf="visible" fontIcon="visibility"></mat-icon>
+            <mat-icon *ngIf="!visible" fontIcon="visibility_off"></mat-icon>
+          </button>
+          <mat-error *ngIf="fromLogin.get('pass')!.hasError('required')">Se requiere la contraseña</mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="button">
+        <button type="submit" mat-button>Ingresar</button>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,49 @@
+:host {
+  display: flex;
+  justify-content: center;
+  margin: 100px 0px;
+  background-image: url("/assets/fondo2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(77, 77, 77, 0.692);
+  background-blend-mode: luminosity;
+}
+.carta {
+  width: 40%;
+  height: 500px;
+  background-color: rgba(77, 77, 77, 0.324);
+  display: flex;
+  justify-content: center;
+}
+.formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.titulo {
+  padding: 2%;
+  color: aliceblue;
+}
+.mat-form-field {
+  width: 100%;
+  min-width: 300px;
+}
+
+mat-card-title,
+mat-card-content {
+  display: flex;
+  justify-content: center;
+}
+
+.error {
+  padding: 16px;
+  width: 300px;
+  color: white;
+  background-color: red;
+}
+
+.button {
+  display: flex;
+  justify-content: flex-end;
+}
