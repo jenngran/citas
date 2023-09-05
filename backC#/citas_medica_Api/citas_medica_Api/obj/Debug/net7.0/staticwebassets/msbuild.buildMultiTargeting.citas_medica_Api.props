@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/citas_medica_Api.props" />
+</Project>
