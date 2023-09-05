@@ -23,15 +23,10 @@ const routes: Routes = [
     loadChildren: () =>
       import('./core-component/errorpages/errorpages.module').then((m) => m.ErrorpagesModule),
   },
-  // {
-  //   path: '**',
-  //   redirectTo: 'errorpages/error404',
-  //   pathMatch: 'full',
-  // },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

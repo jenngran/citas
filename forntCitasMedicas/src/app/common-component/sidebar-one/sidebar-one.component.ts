@@ -8,7 +8,7 @@ import { url } from 'src/app/shared/model/sidebar.model';
   templateUrl: './sidebar-one.component.html',
   styleUrls: ['./sidebar-one.component.scss'],
 })
-export class SidebarOneComponent{
+export class SidebarOneComponent {
   public routes = routes;
   base = '';
   page = '';
@@ -20,7 +20,7 @@ export class SidebarOneComponent{
     private Router: Router,
     private sidebar: SidebarService,
     private router: Router,
-    private activeRouter:ActivatedRoute
+    private activeRouter: ActivatedRoute
   ) {
     router.events.subscribe((event: RouterEvent) => {
       if (event instanceof NavigationEnd) {
@@ -36,9 +36,7 @@ export class SidebarOneComponent{
     this.currentUrl = route.url;
     this.base = splitVal[1];
     this.page = splitVal[2];
-    console.log('base',this.base);
 
-    console.log('page',this.page);
 
   }
 

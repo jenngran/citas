@@ -28,7 +28,7 @@ const routes: Routes = [
           ),
       },
       {
-        path: 'product',
+        path: 'cita',
         loadChildren: () =>
           import('./product/product.module').then((m) => m.ProductModule),
       },
@@ -140,4 +140,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class CoreComponentRoutingModule {}
+export class CoreComponentRoutingModule { }

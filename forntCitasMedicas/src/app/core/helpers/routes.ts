@@ -46,8 +46,8 @@ export class routes {
   public static get blankPage(): string {
     return this.core + '/blank-page';
   }
-  public static get product(): string {
-    return this.core + '/product';
+  public static get cita(): string {
+    return this.core + '/cita';
   }
   public static get sales(): string {
     return this.core + '/sales';
@@ -112,49 +112,49 @@ export class routes {
   // core pages child routes
 
   public static get productList(): string {
-    return this.product + '/product-list';
+    return this.cita + '/product-list';
   }
-  public static get addProduct(): string {
-    return this.product + '/add-product';
+  public static get crearCita(): string {
+    return this.cita + '/crear-cita';
   }
   public static get categoryList(): string {
-    return this.product + '/category-list';
+    return this.cita + '/category-list';
   }
   public static get addCategory(): string {
-    return this.product + '/add-category';
+    return this.cita + '/add-category';
   }
   public static get subCategoryList(): string {
-    return this.product + '/sub-category-list';
+    return this.cita + '/sub-category-list';
   }
   public static get addSubcategory(): string {
-    return this.product + '/sub-add-category';
+    return this.cita + '/sub-add-category';
   }
   public static get addBrand(): string {
-    return this.product + '/add-brand';
+    return this.cita + '/add-brand';
   }
   public static get importProduct(): string {
-    return this.product + '/import-product';
+    return this.cita + '/import-product';
   }
   public static get barcode(): string {
-    return this.product + '/barcode';
+    return this.cita + '/barcode';
   }
   public static get editProduct(): string {
-    return this.product + '/edit-product';
+    return this.cita + '/edit-product';
   }
   public static get editCategory(): string {
-    return this.product + '/edit-category';
+    return this.cita + '/edit-category';
   }
   public static get editSubCategory(): string {
-    return this.product + '/edit-subcategory';
+    return this.cita + '/edit-subcategory';
   }
   public static get editBrand(): string {
-    return this.product + '/edit-brand';
+    return this.cita + '/edit-brand';
   }
   public static get productDetails(): string {
-    return this.product + '/product-details';
+    return this.cita + '/product-details';
   }
   public static get brandList(): string {
-    return this.product + '/brand-list';
+    return this.cita + '/brand-list';
   }
   public static get salesList(): string {
     return this.sales + '/sales-list';

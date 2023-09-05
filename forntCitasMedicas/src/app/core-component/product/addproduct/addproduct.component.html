@@ -1,137 +1,72 @@
+<div class="page-header">
+	<div class="page-title">
+		<h4>Crear Cita Medica</h4>
 
-	<div class="page-header">
-		<div class="page-title">
-			<h4>Product Add</h4>
-			<h6>Create new product</h6>
-		</div>
 	</div>
-	<!-- /add -->
-	<div class="card">
-		<div class="card-body">
-			<div class="row">
-				<div class="col-lg-3 col-sm-6 col-12">
-					<div class="form-group">
-						<label>Product Name</label>
-						<input type="text">
-					</div>
+</div>
+<!-- /add -->
+<div class="card">
+	<div class="card-body">
+		<div class="row">
+			<div class="col-lg-3 col-sm-6 col-12">
+				<div class="form-group">
+					<label>Paciente</label>
+					<mat-select class="select" placeholder="Elige al Paciente">
+						<mat-option *ngFor="let paciente of selectedList1" [value]="paciente.userName"
+							(click)="getMedicosData(paciente,'paciente')">
+							{{paciente.userName |uppercase}}
+						</mat-option>
+					</mat-select>
 				</div>
-				<div class="col-lg-3 col-sm-6 col-12">
-					<div class="form-group">
-						<label>Category</label>
-						<mat-select [(ngModel)]="selectedValue2" [ngModelOptions]="{standalone: true}" class="select"  placeholder="Choose Category">
-							<mat-option *ngFor="let data of selectedList2" [value]="data.value">
-							{{data.value}}
-							</mat-option>
-						</mat-select>
-					</div>
+			</div>
+
+			<div class="col-lg-3 col-sm-6 col-12">
+				<div class="form-group">
+					<label>Medico</label>
+					<mat-select class="select" placeholder="Elige al Medico de la cita">
+						<mat-option *ngFor="let medico of selectedList2" [value]="medico.nombre"
+							(click)="getMedicosData(medico,'medico')">
+							{{medico.nombre |uppercase}}
+						</mat-option>
+					</mat-select>
+
 				</div>
-				<div class="col-lg-3 col-sm-6 col-12">
-					<div class="form-group">
-						<label>Sub Category</label>
-						<mat-select [(ngModel)]="selectedValue1" [ngModelOptions]="{standalone: true}" class="select"  placeholder="Choose Sub Category">
-							<mat-option *ngFor="let data of selectedList1" [value]="data.value">
-							{{data.value}}
-							</mat-option>
-						</mat-select>
-					</div>
+			</div>
+			<div class="col-lg-3 col-sm-6 col-12">
+				<div class="form-group">
+					<label>Especialidad</label>
+					<input type="text" [(ngModel)]="especialidad" readonly>
 				</div>
-				<div class="col-lg-3 col-sm-6 col-12">
-					<div class="form-group">
-						<label>Brand</label>
-						<mat-select [(ngModel)]="selectedValue3" [ngModelOptions]="{standalone: true}" class="select"  placeholder="Choose Brand">
-							<mat-option *ngFor="let data of selectedList3" [value]="data.value">
-							{{data.value}}
-							</mat-option>
-						</mat-select>
-					</div>
+			</div>
+			<div class="col-lg-3 col-sm-6 col-12" style="display: flex;
+			justify-content: center;
+			align-content: center;
+			align-items: center;">
+				<div class="form-group" style="    margin-right: 10px;">
+					<mat-label>Fecha</mat-label>
+					<input type="text" [matDatepicker]="picker" [(ngModel)]="fechaIngreso">
+					<mat-datepicker #picker></mat-datepicker>
 				</div>
-				<div class="col-lg-3 col-sm-6 col-12">
-					<div class="form-group">
-						<label>Unit</label>
-						<mat-select [(ngModel)]="selectedValue4" [ngModelOptions]="{standalone: true}" class="select"  placeholder="Choose Unit">
-							<mat-option *ngFor="let data of selectedList4" [value]="data.value">
-							{{data.value}}
-							</mat-option>
-						</mat-select>
-					</div>
+
+				<button style="    width: 35px;
+				height: 35px;" mat-fab (click)="picker.open()">
+					<mat-icon>calendar_month</mat-icon>
+				</button>
+			</div>
+
+
+			<div class="col-lg-12">
+				<div class="form-group">
+					<label>Description</label>
+					<textarea class="form-control" [(ngModel)]="descripcion"></textarea>
 				</div>
-				<div class="col-lg-3 col-sm-6 col-12">
-					<div class="form-group">
-						<label>SKU</label>
-						<input type="text">
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 col-12">
-					<div class="form-group">
-						<label>Minimum Qty</label>
-						<input type="text">
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 col-12">
-					<div class="form-group">
-						<label>Quantity</label>
-						<input type="text">
-					</div>
-				</div>
-				<div class="col-lg-12">
-					<div class="form-group">
-						<label>Description</label>
-						<textarea class="form-control"></textarea>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 col-12">
-					<div class="form-group">
-						<label>Tax</label>
-						<mat-select [(ngModel)]="selectedValue5" [ngModelOptions]="{standalone: true}" class="select"  placeholder="Choose Tax">
-							<mat-option *ngFor="let data of selectedList5" [value]="data.value">
-							{{data.value}}
-							</mat-option>
-						</mat-select>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 col-12">
-					<div class="form-group">
-						<label>Discount Type</label>
-						<mat-select [(ngModel)]="selectedValue6" [ngModelOptions]="{standalone: true}" class="select"  placeholder="Choose Tax">
-							<mat-option *ngFor="let data of selectedList6" [value]="data.value">
-							{{data.value}}
-							</mat-option>
-						</mat-select>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 col-12">
-					<div class="form-group">
-						<label>Price</label>
-						<input type="text">
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 col-12">
-					<div class="form-group">
-						<label> Status</label>
-						<mat-select [(ngModel)]="selectedValue7" [ngModelOptions]="{standalone: true}" class="select"  placeholder="Closed">
-							<mat-option *ngFor="let data of selectedList7" [value]="data.value">
-							{{data.value}}
-							</mat-option>
-						</mat-select>
-					</div>
-				</div>
-				<div class="col-lg-12">
-					<div class="form-group">
-						<label> Product Image</label>
-						<div class="image-upload">
-							<input type="file">
-							<div class="image-uploads">
-								<img src="assets/img/icons/upload.svg" alt="img">
-								<h4>Drag and drop a file to upload</h4>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-12">
-					<a href="javascript:void(0);" class="btn btn-submit me-2">Submit</a>
-					<a [routerLink]="routes.productList" class="btn btn-cancel">Cancel</a>
-				</div>
+			</div>
+
+			<div class="col-lg-12">
+				<a [routerLink]="routes.dashboard" class="btn btn-cancel" style="margin-right: 10px;">Salir</a>
+				<a href="javascript:void(0);" class="btn btn-submit me-2" (click)="guardarCita()">Crear</a>
 			</div>
 		</div>
 	</div>
-	<!-- /add -->
+</div>
+<!-- /add -->

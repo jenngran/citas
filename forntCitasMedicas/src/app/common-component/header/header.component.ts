@@ -10,7 +10,7 @@ import * as Feather from 'feather-icons';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit{
+export class HeaderComponent implements OnInit {
   public routes = routes;
   activePath = '';
   showSearch = false;
@@ -18,7 +18,7 @@ export class HeaderComponent implements OnInit{
   public darkTheme = false;
   public logoPath = '';
   public miniSidebar = false;
-  elem=document.documentElement
+  elem = document.documentElement
   public addClass = false;
 
 
@@ -47,10 +47,10 @@ export class HeaderComponent implements OnInit{
     this.settings.changeTheme.subscribe((res: string) => {
       if (res == 'Dark') {
         this.darkTheme = true;
-        this.logoPath = 'assets/img/logo-white.png';
+        // this.logoPath = 'assets/img/logo-white.png';
       } else {
         this.darkTheme = false;
-        this.logoPath = 'assets/img/logo.png';
+        this.logoPath = 'assets/img/logo2.png';
       }
     });
   }
@@ -80,7 +80,7 @@ export class HeaderComponent implements OnInit{
   }
 
   fullscreen() {
-    if(!document.fullscreenElement) {
+    if (!document.fullscreenElement) {
       this.elem.requestFullscreen();
     }
     else {

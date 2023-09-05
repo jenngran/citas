@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { routes } from 'src/app/core/helpers/routes';
 import { WebstorgeService } from 'src/app/shared/webstorge.service';
 
@@ -8,21 +8,17 @@ import { WebstorgeService } from 'src/app/shared/webstorge.service';
   templateUrl: './signin.component.html',
   styleUrls: ['./signin.component.scss'],
 })
-export class SigninComponent implements OnInit{
+export class SigninComponent implements OnInit {
   public routes = routes;
   password = '';
   show = false;
 
-  form = new FormGroup({
-    email: new FormControl('user@dreamguystech.com', [Validators.required]),
-    password: new FormControl('12345', [Validators.required]),
+  form = this.fb.group({
+    nombre: ['', [Validators.required]],
+    password: ['', Validators.required]
   });
 
-  get f() {
-    return this.form.controls;
-  }
-
-  constructor(private storage: WebstorgeService) {}
+  constructor(private storage: WebstorgeService, private fb: FormBuilder,) { }
 
   ngOnInit() {
     if (localStorage.getItem('authenticated')) {
@@ -33,7 +29,7 @@ export class SigninComponent implements OnInit{
 
   submit() {
     if (this.form.valid) {
-      this.storage.login();
+      this.storage.login(this.form.get("nombre")?.value, this.form.get("password")?.value);
     } else {
       this.form.markAllAsTouched();
     }

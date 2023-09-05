@@ -4,10 +4,9 @@
     <h6>Manage your products</h6>
   </div>
   <div class="page-btn">
-    <a [routerLink]="routes.addProduct" class="btn btn-added"
-      ><img src="assets/img/icons/plus.svg" alt="img" class="me-1" />Add New
-      Product</a
-    >
+    <a [routerLink]="routes.crearCita" class="btn btn-added"><img src="assets/img/icons/plus.svg" alt="img"
+        class="me-1" />Add New
+      Product</a>
   </div>
 </div>
 
@@ -17,38 +16,18 @@
     <div class="table-top">
       <div class="search-set">
         <div class="search-path">
-          <a
-            class="btn btn-filter"
-            (click)="showFilter = !showFilter"
-            [class.setclose]="showFilter === true"
-            id="filter_search"
-          >
-            <img
-              *ngIf="showFilter === false"
-              src="assets/img/icons/filter.svg"
-              alt="img"
-            />
-            <span
-              ><img
-                *ngIf="showFilter === true"
-                src="assets/img/icons/closes.svg"
-                alt="img"
-            /></span>
+          <a class="btn btn-filter" (click)="showFilter = !showFilter" [class.setclose]="showFilter === true"
+            id="filter_search">
+            <img *ngIf="showFilter === false" src="assets/img/icons/filter.svg" alt="img" />
+            <span><img *ngIf="showFilter === true" src="assets/img/icons/closes.svg" alt="img" /></span>
           </a>
         </div>
         <div class="search-input">
-          <a class="btn btn-searchset"
-            ><img src="assets/img/icons/search-white.svg" alt="img"
-          /></a>
+          <a class="btn btn-searchset"><img src="assets/img/icons/search-white.svg" alt="img" /></a>
           <div class="dataTables_filter">
             <label>
-              <input
-                [(ngModel)]="searchDataValue"
-                (ngModelChange)="searchData(searchDataValue)"
-                type="search"
-                class="form-control"
-                placeholder="Search..."
-              />
+              <input [(ngModel)]="searchDataValue" (ngModelChange)="searchData(searchDataValue)" type="search"
+                class="form-control" placeholder="Search..." />
             </label>
           </div>
         </div>
@@ -56,89 +35,82 @@
       <div class="wordset">
         <ul>
           <li>
-            <a data-bs-toggle="tooltip" data-bs-placement="top" title="pdf"
-              ><img src="assets/img/icons/pdf.svg" alt="img"
-            /></a>
+            <a data-bs-toggle="tooltip" data-bs-placement="top" title="pdf"><img src="assets/img/icons/pdf.svg"
+                alt="img" /></a>
           </li>
           <li>
-            <a data-bs-toggle="tooltip" data-bs-placement="top" title="excel"
-              ><img src="assets/img/icons/excel.svg" alt="img"
-            /></a>
+            <a data-bs-toggle="tooltip" data-bs-placement="top" title="excel"><img src="assets/img/icons/excel.svg"
+                alt="img" /></a>
           </li>
           <li>
-            <a
-              data-bs-toggle="tooltip"
-              target="_blank"
-              data-bs-placement="top"
-              title="print"
-              ><img src="assets/img/icons/printer.svg" alt="img"
-            /></a>
+            <a data-bs-toggle="tooltip" target="_blank" data-bs-placement="top" title="print"><img
+                src="assets/img/icons/printer.svg" alt="img" /></a>
           </li>
         </ul>
       </div>
     </div>
     <!-- /Filter -->
-    <div
-      class="card mb-0 border-0"
-      [ngClass]="{
+    <div class="card mb-0 border-0" [ngClass]="{
         'show-sub-menu': showFilter === true,
         'hide-sub-menu': showFilter === false
-      }"
-    >
+      }">
       <div class="card-body p-0">
         <div class="row">
           <div class="col-lg-12 col-sm-12">
             <div class="row">
               <div class="col-lg col-sm-6 col-12">
                 <div class="form-group">
-                  <mat-select [(ngModel)]="selectedValue2" [ngModelOptions]="{standalone: true}" class="select"  placeholder="Choose Unit">
+                  <mat-select [(ngModel)]="selectedValue2" [ngModelOptions]="{standalone: true}" class="select"
+                    placeholder="Choose Unit">
                     <mat-option *ngFor="let data of selectedList2" [value]="data.value">
-                    {{data.value}}
+                      {{data.value}}
                     </mat-option>
-                </mat-select>
+                  </mat-select>
                 </div>
               </div>
               <div class="col-lg col-sm-6 col-12">
                 <div class="form-group">
-                  <mat-select [(ngModel)]="selectedValue1" [ngModelOptions]="{standalone: true}" class="select"  placeholder="Choose Sub Category">
+                  <mat-select [(ngModel)]="selectedValue1" [ngModelOptions]="{standalone: true}" class="select"
+                    placeholder="Choose Sub Category">
                     <mat-option *ngFor="let data of selectedList1" [value]="data.value">
-                    {{data.value}}
+                      {{data.value}}
                     </mat-option>
-                </mat-select>
+                  </mat-select>
                 </div>
               </div>
               <div class="col-lg col-sm-6 col-12">
                 <div class="form-group">
-                  <mat-select [(ngModel)]="selectedValue3" [ngModelOptions]="{standalone: true}" class="select"  placeholder="Choose Product">
+                  <mat-select [(ngModel)]="selectedValue3" [ngModelOptions]="{standalone: true}" class="select"
+                    placeholder="Choose Product">
                     <mat-option *ngFor="let data of selectedList3" [value]="data.value">
-                    {{data.value}}
+                      {{data.value}}
                     </mat-option>
-                </mat-select>
+                  </mat-select>
                 </div>
               </div>
               <div class="col-lg col-sm-6 col-12">
                 <div class="form-group">
-                  <mat-select [(ngModel)]="selectedValue4" [ngModelOptions]="{standalone: true}" class="select"  placeholder="Brand">
+                  <mat-select [(ngModel)]="selectedValue4" [ngModelOptions]="{standalone: true}" class="select"
+                    placeholder="Brand">
                     <mat-option *ngFor="let data of selectedList4" [value]="data.value">
-                    {{data.value}}
+                      {{data.value}}
                     </mat-option>
-                </mat-select>
+                  </mat-select>
                 </div>
               </div>
               <div class="col-lg col-sm-6 col-12">
                 <div class="form-group">
-                  <mat-select [(ngModel)]="selectedValue5" [ngModelOptions]="{standalone: true}" class="select"  placeholder="Price">
+                  <mat-select [(ngModel)]="selectedValue5" [ngModelOptions]="{standalone: true}" class="select"
+                    placeholder="Price">
                     <mat-option *ngFor="let data of selectedList5" [value]="data.value">
-                    {{data.value}}
+                      {{data.value}}
                     </mat-option>
-                </mat-select>
+                  </mat-select>
                 </div>
               </div>
               <div class="col-lg-1 col-sm-6 col-12">
                 <div class="form-group">
-                  <a class="btn btn-filters ms-auto"
-                    ><img src="assets/img/icons/search-whites.svg" alt="img"
-                  /></a>
+                  <a class="btn btn-filters ms-auto"><img src="assets/img/icons/search-whites.svg" alt="img" /></a>
                 </div>
               </div>
             </div>
@@ -148,15 +120,8 @@
     </div>
     <!-- /Filter -->
     <div class="table-responsive">
-      <table
-        (matSortChange)="sortData($event)"
-        matSort
-        matSortActive="Sno"
-        matSortDirection="asc"
-        matSortDisableClear
-        class="table"
-        id="printTable"
-      >
+      <table (matSortChange)="sortData($event)" matSort matSortActive="Sno" matSortDirection="asc" matSortDisableClear
+        class="table" id="printTable">
         <thead>
           <tr>
             <th>
@@ -205,11 +170,7 @@
                 <img src="assets/img/icons/edit.svg" alt="img" />
               </a>
 
-              <a
-                (click)="deleteBtn()"
-                class="confirm-text"
-                href="javascript:void(0);"
-              >
+              <a (click)="deleteBtn()" class="confirm-text" href="javascript:void(0);">
                 <img src="assets/img/icons/delete.svg" alt="img" />
               </a>
             </td>

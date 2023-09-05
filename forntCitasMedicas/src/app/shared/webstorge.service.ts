@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { routes } from '../core/helpers/routes';
+import { ApiService } from '../core/service/data/api.service';
 
 
 @Injectable({
@@ -8,11 +9,16 @@ import { routes } from '../core/helpers/routes';
 })
 export class WebstorgeService {
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private api: ApiService) { }
 
-  public login(): void {
-    localStorage.setItem('authenticated', 'true');
-    this.router.navigate([routes.dashboard]);
+  public login(username: any, pass: any): void {
+    this.api.auth(username, pass).subscribe((data: any) => {
+      localStorage.setItem('authenticated', 'true');
+      this.router.navigate([routes.dashboard]);
+    }, error => {
+      localStorage.setItem('authenticated', 'false');
+    })
+
   }
   public submit(): void {
     localStorage.setItem('authenticated', 'true');

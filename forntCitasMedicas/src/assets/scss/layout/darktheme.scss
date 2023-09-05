@@ -983,10 +983,10 @@
     color: #97a2d2;
   }
   .mdc-text-field--filled {
-	&:not(.mdc-text-field--disabled) {
-		background-color: #97a2d2;
-	}
-}
+    &:not(.mdc-text-field--disabled) {
+      background-color: #97a2d2;
+    }
+  }
   .mat-mdc-button .mdc-button__label,
   .mat-mdc-unelevated-button .mdc-button__label,
   .mat-mdc-raised-button .mdc-button__label,
@@ -995,19 +995,19 @@
     color: #97a2d2;
   }
   .sidebar {
-	.sidebar-menu {
-		>ul {
-			li.active {
-				span {
-					color: #fe9f43;
-				}
-			}
-		}
-	}
-}
-li.active {
-	span.menu-arrow {
-		background: #ffeddc !important;
-	}
-}
+    .sidebar-menu {
+      > ul {
+        li.active {
+          span {
+            color: $__medCorpColor;
+          }
+        }
+      }
+    }
+  }
+  li.active {
+    span.menu-arrow {
+      background: #ffeddc !important;
+    }
+  }
 }

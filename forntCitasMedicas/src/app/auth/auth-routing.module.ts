@@ -13,18 +13,18 @@ const routes: Routes = [
         loadChildren: () =>
           import('./signin/signin.module').then((m) => m.SigninModule),
       },
-      {
-        path: 'signup',
-        loadChildren: () =>
-          import('./signup/signup.module').then((m) => m.SignupModule),
-      },
-      {
-        path: 'forgetpassword',
-        loadChildren: () =>
-          import('./forgetpassword/forgetpassword.module').then(
-            (m) => m.ForgetpasswordModule
-          ),
-      },
+      // {
+      //   path: 'signup',
+      //   loadChildren: () =>
+      //     import('./signup/signup.module').then((m) => m.SignupModule),
+      // },
+      // {
+      //   path: 'forgetpassword',
+      //   loadChildren: () =>
+      //     import('./forgetpassword/forgetpassword.module').then(
+      //       (m) => m.ForgetpasswordModule
+      //     ),
+      // },
     ],
   },
 ];
@@ -33,4 +33,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class AuthRoutingModule {}
+export class AuthRoutingModule { }
