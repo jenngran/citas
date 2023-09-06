@@ -7,7 +7,6 @@ C# y Angular se pueden utilizar juntos para desarrollar aplicaciones web complet
 
 El backend de la aplicación es la parte de la aplicación que se ejecuta en el servidor. El backend es responsable de almacenar los datos, procesar las solicitudes y generar la respuesta.
 
-#Diagramas realizados
 
 #Actividades asignadas:
 
