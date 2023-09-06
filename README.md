@@ -12,13 +12,13 @@ El backend de la aplicación es la parte de la aplicación que se ejecuta en el 
 #Actividades asignadas:
 
 * Jenniffer Granda
- * Creación de clases del sistema.
- * Creación de funciones.
- * Aplicación de diagramas al sistema.
- * Verificación de frontend.
+  * Creación de clases del sistema.
+  * Creación de funciones.
+  * Aplicación de diagramas al sistema.
+  * Verificación de frontend.
    
 * Eduardo Sosa
- * Creación de html
- * Creación de estilos.
- * Implementación de frameworks
- * Creación de funciónes
+  * Creación de html
+  * Creación de estilos.
+  * Implementación de frameworks
+  * Creación de funciónes
