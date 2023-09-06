@@ -1,0 +1,58 @@
+<div class="account-content">
+  <div class="login-wrapper">
+    <div class="login-content">
+      <div class="login-userset">
+        <div class="login-logo logo-normal">
+          <img src="assets/img/logo2.png" alt="img" />
+        </div>
+        <a [routerLink]="routes.dashboard" class="login-logo logo-white">
+          <img src="assets/img/logo2.png" alt="" />
+        </a>
+        <div class="login-userheading">
+          <h3>Login</h3>
+          <!-- <h4>Please login to your account</h4> -->
+        </div>
+        <form [formGroup]="form">
+          <div class="form-login">
+            <label>UserName</label>
+            <div class="form-addons">
+              <input type="text" placeholder="" formControlName="nombre" id="email" />
+              <img src="assets/img/icons/mail.svg" alt="img" />
+              <!-- <div *ngIf="f['email'].touched && f['email'].invalid" class="invalid-feedback">
+                <div *ngIf="f['email'].errors && f['email'].errors['required']">
+                  Usuario es requerido.
+                </div>
+              </div> -->
+            </div>
+          </div>
+          <div class="form-login">
+            <label>Password</label>
+            <div class="pass-group">
+              <input [type]="password" class="pass-input" placeholder="" formControlName="password" id="password" />
+              <!-- <div *ngIf="f['password'].touched && f['password'].invalid" class="invalid-feedback">
+                <div *ngIf="
+                    f['password'].errors && f['password'].errors['required']
+                  ">
+                  Password es requerido.
+                </div>
+              </div> -->
+              <span class="fas toggle-password fa-eye" (click)="onClick()" *ngIf="show"></span>
+              <span class="fas toggle-password fa-eye-slash" (click)="onClick()" *ngIf="!show"></span>
+            </div>
+          </div>
+          <div class="form-login">
+            <button (click)="submit()" [disabled]="form.invalid" class="btn btn-login" type="submit">
+              Ingresar
+            </button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+    <div class="login-img">
+      <img src="assets/img/fondo2.jpg" alt="img" style="
+      object-fit: contain;
+  " />
+    </div>
+  </div>
+</div>

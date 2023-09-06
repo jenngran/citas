@@ -1,0 +1,32 @@
+<div class="card mb-0">
+  <div class="card-body">
+    <h4 class="card-title">Lista de citas</h4>
+    <div class="table-responsive dataview">
+      <table (matSortChange)="sortExpiredProducts($event)" matSort matSortActive="Sno" matSortDirection="asc"
+        matSortDisableClear class="table">
+        <thead>
+          <tr>
+            <th mat-sort-header="Sno">SNo</th>
+            <th mat-sort-header="NombrePaciente">Nombre Paciente</th>
+            <th mat-sort-header="Medico">Medico</th>
+            <th mat-sort-header="Especializacion">Especializacion</th>
+            <th mat-sort-header="descripcionCita">Descripcion</th>
+            <th mat-sort-header="fecha">Fecha</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let dashboard2 of lista_Citas">
+            <td>{{ dashboard2.SNo }}</td>
+            <td>
+              <a href="javascript:void(0);">{{ dashboard2.NombrePaciente}}</a>
+            </td>
+            <td>{{ dashboard2.Medico }}</td>
+            <td>{{ dashboard2.Especializacion }}</td>
+            <td>{{ dashboard2.descripcionCita }}</td>
+            <td>{{ dashboard2.fecha | date: 'shortDate' }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{E39F431D-E404-4393-8696-37DED1C6B65B}|https">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="citas_medica_Api/Models/CitaDto.cs">
+    <Files>
+      <File FileName="citas_medica_Api/Controllers/CitasController.cs" Line="51" Column="59" />
+      <File FileName="citas_medica_Api/Program.cs" Line="21" Column="35" />
+      <File FileName="citas_medica_Api/Models/CitaDto.cs" Line="5" Column="2" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="citas_medica_Api" expanded="True">
+            <Node name="citas_medica_Api" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="CitasController.cs" selected="True" />
+              </Node>
+              <Node name="db" expanded="True" />
+              <Node name="Models" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.citas__medica__Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>
